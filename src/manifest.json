@@ -4,7 +4,7 @@
   "version": "1.0",
   "manifest_version": 2,
 
-  "homepage_url": "https://github.com/chouaniamehdi/animenewsnetwork-better-experience",
+  "homepage_url": "https://github.com/Myorave/ANN-Better-Experience",
 
   "browser_action": {
     "default_icon": {
@@ -22,5 +22,5 @@
     "32": "/icons/icon-32.png"
   },
 
-  "author": "Mehdi Chouania <mehdichouania@protonmail.com> (louisgrasset.fr)"
+  "author": "Mehdi Chouania <chouania.mehdi@hotmail.fr> (chouaniamehdi.fr)"
 }
