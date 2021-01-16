@@ -1,5 +1,6 @@
 const defaultSettings = {
     showBanner: true,
+    bannerInjection: false,
     showNonGlobalArticles: true,
     showSidebar: true,
     togglePageFullWidth: true,
@@ -27,6 +28,20 @@ const updateSettingsView = (settings) => {
         let setting = settings[input.getAttribute('data-setting')];
         if (input.type === "checkbox") {
             input.checked = setting;
+            if(input?.getAttribute('data-role') === 'parent') {
+                let inputs = input.parentElement.parentElement.querySelectorAll('input[data-role="child"]');
+                inputs.forEach(input => {
+                    if(input.type === "checkbox") {
+                        if(setting) {
+                            input.parentElement.classList.remove('switch--disabled');
+                        } else {
+                            input.parentElement.classList.add('switch--disabled');
+                        }
+                        input.disabled = !setting;
+
+                    }
+                })
+            }
         }
         else {
             input.value = setting;
@@ -40,6 +55,7 @@ const saveSettings = (setting) => {
         let settings = data.settings ? data.settings : defaultSettings;
         settings[setting] = (input.type === "checkbox") ? input.checked : parseInt(input.value);
         chrome.storage.local.set({'settings': settings})
+        updateSettingsView(settings);
     });
 }
 

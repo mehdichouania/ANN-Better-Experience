@@ -55,8 +55,41 @@ body {
     display: none;
 }
 
+.switch.switch--disabled {
+    opacity: 0.5;
+}
+.switch.switch--disabled .switch-item {
+    filter: grayscale(1);
+}
+
 .switch .switch-label{
     align-self: center;
+}
+
+.switch .switch-input[data-role='child'] + .switch-label {
+    padding-left: 24px;
+    position: relative;
+}
+
+.switch .switch-input[data-role='child'] + .switch-label::before {
+    content:'';
+    position: absolute;
+    height: 26px;
+    width: 0.5px;
+    left: 1px;
+    top: -20px;
+    background-color: var(--muted);
+}
+.switch .switch-input[data-role='child'] + .switch-label::after {
+    content:'';
+    position: absolute;
+    height: 0.5px;
+    width: 15px;
+    left: 1px;
+    top: 6px;
+    background-color: var(--muted);
+    transform-origin: left;
+    transform: rotate(30deg);
 }
 
 .switch .switch-item {

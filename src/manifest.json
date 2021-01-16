@@ -22,5 +22,13 @@
     "32": "/icons/icon-32.png"
   },
 
+  "content_scripts": [
+    {
+      "matches": ["https://www.animenewsnetwork.com/*"],
+      "js": ["annbe.js"],
+      "css": ["annbe.css"]
+    }
+  ],
+
   "author": "Mehdi Chouania <chouania.mehdi@hotmail.fr> (chouaniamehdi.fr)"
 }
