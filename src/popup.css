@@ -1,0 +1,91 @@
+html {
+    --primary: #4BD865;
+    --secondary: #4f6c8a;
+    --muted: #bebebe;
+    --white: #ffffff;
+    --anim-duration: 0.125s;
+    min-width: 256px;
+}
+
+body {
+    padding: 16px;
+    background-color: #fafafa;
+    font-family: 'Lato';
+    user-select: none;
+}
+
+#app {
+    max-width: 630px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align:center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.anim-spin {
+    margin:  0 auto;
+    display:block;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    text-align: inherit;
+    animation: spin 2s linear infinite;
+}
+
+.switch {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 60px;
+    column-gap: 16px;
+    margin-bottom: 16px;
+}
+
+.switch .switch-input {
+    display: none;
+}
+
+.switch .switch-label{
+    align-self: center;
+}
+
+.switch .switch-item {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: var(--muted);
+    border-radius: 17px;
+}
+
+.switch .switch-item__toggle {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--white);
+    transition: transform var(--anim-duration) ease-in;
+    border-radius: 50%;
+}
+
+.switch .switch-input:checked ~ .switch-label {}
+
+.switch .switch-input:checked ~ .switch-item {
+    transition: background-color var(--anim-duration) ease-in;
+    background-color: var(--primary);
+}
+
+.switch .switch-input:checked ~ .switch-item .switch-item__toggle {
+    transform: translateX(26px);
+}

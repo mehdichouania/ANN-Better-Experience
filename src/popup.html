@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>ANN Better Experience</title>
+        <link rel="stylesheet" href="./popup.css">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato">
+    </head>
+
+    <body>
+        <p class="text-center">
+            <span>ANN Better Experience</span>
+        </p>
+        <div id="app">
+            <label class="switch">
+                <input class="switch-input" data-setting="showBanner" type="checkbox"/>
+                <div class="switch-label">Show banner</div>
+                <div class="switch-item">
+                    <span class="switch-item__toggle"></span>
+                </div>
+            </label>
+
+            <label class="switch">
+                <input class="switch-input" data-setting="showNonGlobalArticles" type="checkbox"/>
+                <div class="switch-label">Show localized articles</div>
+                <div class="switch-item">
+                    <span class="switch-item__toggle"></span>
+                </div>
+            </label>
+
+            <label class="switch">
+                <input class="switch-input" data-setting="showSidebar" type="checkbox"/>
+                <div class="switch-label">Show sidebar</div>
+                <div class="switch-item">
+                    <span class="switch-item__toggle"></span>
+                </div>
+            </label>
+
+            <label class="switch">
+                <input class="switch-input" data-setting="togglePageFullWidth" type="checkbox"/>
+                <div class="switch-label">Toggle page fullwidth</div>
+                <div class="switch-item">
+                    <span class="switch-item__toggle"></span>
+                </div>
+            </label>
+
+            <label class="switch">
+                <div class="switch-label">
+                    <div>Number of articles per line</div>
+                </div>
+                <input data-setting="articlesPerLine" steps="1" min="3" max="10" type="number" name="" id="">
+            </label>
+            <a href="#" id="reset">Reset all settings</a>
+        </div>
+        <script type="module" src="./popup.js"></script>
+    </body>
+</html>
