@@ -79,8 +79,6 @@ body {
     border-radius: 50%;
 }
 
-.switch .switch-input:checked ~ .switch-label {}
-
 .switch .switch-input:checked ~ .switch-item {
     transition: background-color var(--anim-duration) ease-in;
     background-color: var(--primary);
