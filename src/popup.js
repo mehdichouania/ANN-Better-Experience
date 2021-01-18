@@ -1,10 +1,11 @@
 const defaultSettings = {
-    showBanner: true,
-    bannerInjection: false,
+    showAside: true,
+    asideInjection: false,
     showNonGlobalArticles: true,
-    showSidebar: true,
+    showBanner: true,
+    showSettings: true,
     togglePageFullWidth: true,
-    articlesPerLine: 3
+    articlesPerLine: 5
 }
 
 let inputs = document.querySelectorAll('#app .switch input');

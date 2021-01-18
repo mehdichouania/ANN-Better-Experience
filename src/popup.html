@@ -14,22 +14,21 @@
 
             <div>
                 <label class="switch">
-                    <input class="switch-input" data-setting="showBanner" type="checkbox" data-role="parent"/>
-                    <div class="switch-label">Show banner</div>
+                    <input class="switch-input" data-setting="showAside" type="checkbox" data-role="parent"/>
+                    <div class="switch-label">Show aside</div>
                     <div class="switch-item">
                         <span class="switch-item__toggle"></span>
                     </div>
                 </label>
                             
                 <label class="switch">
-                    <input class="switch-input" data-setting="bannerInjection" type="checkbox" data-role="child"/>
+                    <input class="switch-input" data-setting="asideInjection" type="checkbox" data-role="child"/>
                     <div class="switch-label">Inject banner feed above news feed</div>
                     <div class="switch-item">
                         <span class="switch-item__toggle"></span>
                     </div>
                 </label>
             </div>
-
 
             <div>
                 <label class="switch">
@@ -43,8 +42,18 @@
 
             <div>
                 <label class="switch">
-                    <input class="switch-input" data-setting="showSidebar" type="checkbox"/>
-                    <div class="switch-label">Show sidebar</div>
+                    <input class="switch-input" data-setting="showBanner" type="checkbox"/>
+                    <div class="switch-label">Show banner</div>
+                    <div class="switch-item">
+                        <span class="switch-item__toggle"></span>
+                    </div>
+                </label>
+            </div>
+
+            <div>
+                <label class="switch">
+                    <input class="switch-input" data-setting="showSettings" type="checkbox"/>
+                    <div class="switch-label">Show settings bar</div>
                     <div class="switch-item">
                         <span class="switch-item__toggle"></span>
                     </div>
@@ -66,7 +75,7 @@
                     <div class="switch-label">
                         <div>Number of articles per line</div>
                     </div>
-                    <input data-setting="articlesPerLine" steps="1" min="3" max="10" type="number" name="" id="">
+                    <input data-setting="articlesPerLine" steps="1" min="3" max="8" type="number" name="" id="">
                 </label>
             </div>
             <a href="#" id="reset">Reset all settings</a>
