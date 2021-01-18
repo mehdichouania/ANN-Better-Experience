@@ -1,36 +1,98 @@
 html {
-    --primary: #4BD865;
-    --secondary: #4f6c8a;
-    --muted: #bebebe;
+    --primary: #51B8C6;
+    --secondary: #006599;
+    --gray: #bebebe;
+    --muted: #e2e2e2;
     --white: #ffffff;
+    --background: #eeeeee;
     --anim-duration: 0.125s;
-    min-width: 256px;
+    --ann: #96c800;
+    width: 320px;
 }
 
 body {
-    padding: 16px;
-    background-color: #fafafa;
+    background-color: var(--background);
     font-family: 'Lato';
     user-select: none;
+    margin:0;
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+header {
+    border-top: 3px solid var(--primary);
+    padding: 10PX;
+    text-align: center;
+    font-size: 23.5px;
 }
 
+header .logo {
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+
+header .logo .brand {
+    margin-bottom: 2px;
+}
+header .logo .brand span {
+    position: relative;
+}
+header .logo .brand span::after {
+    content:'';
+    bottom: 0;
+    left:0;
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid var(--ann);
+}
+
+header .logo .brand span:nth-child(1) {
+ font-weight: 800;
+}
+
+header .logo .brand span:nth-child(2) {
+    font-weight: 200;
+}
+
+header .logo .brand span:nth-child(3) {
+    font-weight: 500;
+}
+
+header .logo .baseline {
+    font-size: 9.5px;
+}
 #app {
+    padding: 16px;
     max-width: 630px;
     margin: 0 auto;
 }
 
-.text-center {
-    text-align:center;
+#app > div {
+    opacity: 0;
+    animation: slide .1s ease-out forwards
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg)
-    }
-    
-    to {
-        transform: rotate(360deg)
-    }
+#app > div:nth-child(1) {
+    animation-delay: 0.05s;
+}
+#app > div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+#app > div:nth-child(3) {
+    animation-delay: 0.15s;
+}
+#app > div:nth-child(4) {
+    animation-delay: 0.2s;
+}
+#app > div:nth-child(5) {
+    animation-delay: 0.25s;
+}
+#app > div:nth-child(6) {
+    animation-delay: 0.3s;
+}
+#app > div:nth-child(7) {
+    animation-delay: 0.35s;
+}
+#app > div:nth-child(8) {
+    animation-delay: 0.4s;
 }
 
 .anim-spin {
@@ -46,9 +108,11 @@ body {
 .switch {
     cursor: pointer;
     display: grid;
-    grid-template-columns: 1fr 60px;
+    grid-template-columns: 1fr 80px;
     column-gap: 16px;
     margin-bottom: 16px;
+    justify-self: end;
+    font-size: 16px;
 }
 
 .switch .switch-input {
@@ -78,7 +142,7 @@ body {
     width: 0.5px;
     left: 1px;
     top: -20px;
-    background-color: var(--muted);
+    background-color: var(--gray);
 }
 .switch .switch-input[data-role='child'] + .switch-label::after {
     content:'';
@@ -87,7 +151,7 @@ body {
     width: 15px;
     left: 1px;
     top: 6px;
-    background-color: var(--muted);
+    background-color: var(--gray);
     transform-origin: left;
     transform: rotate(30deg);
 }
@@ -97,8 +161,10 @@ body {
     display: inline-block;
     width: 60px;
     height: 34px;
-    background-color: var(--muted);
+    background-color: var(--gray);
     border-radius: 17px;
+    justify-self: end;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .switch .switch-item__toggle {
@@ -119,4 +185,161 @@ body {
 
 .switch .switch-input:checked ~ .switch-item .switch-item__toggle {
     transform: translateX(26px);
+}
+
+#reset {
+    margin-top: 32px;
+   display: block;
+   padding: 10px;
+   border: none;
+   border-radius: 6px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 12px;
+   text-transform: uppercase;
+   background-color: var(--secondary);
+   color: white;
+}
+
+#reset:hover svg {
+    transform: rotate(360deg);
+} 
+
+#reset svg {
+    position: relative;
+    top: 2px;
+    height: 12px;
+    width: 12px;
+    margin-right: 6px;
+    fill: currentColor;
+    transform-origin: calc(50% - 0.5px) 50%;
+    transition: transform 2s ease-out;
+}
+
+.btnwrapper {
+    display: grid;
+    height: 30px;
+    grid-template-columns: 20px 25px 20px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background-color: var(--white);
+    margin-left: 16px;
+}
+
+.btnwrapper div {
+    height: 30px;
+    line-height: 30px;
+}
+
+.btnwrapper div,
+.btnwrapper input {
+    background-color: inherit;
+}
+
+.btnwrapper input {
+    position: relative;
+    top: 1px;
+}
+
+.btnwrapper div:first-child {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.btnwrapper div:last-child {
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.btnwrapper input[type=number] {
+    text-align: inherit;
+    -moz-appearance: textfield;
+    border: none;
+    border-left: 1px solid var(--muted);
+    border-right: 1px solid var(--muted);
+    max-height: 80%;
+}
+
+.btnwrapper input[type=number]::-webkit-outer-spin-button,
+.btnwrapper input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    text-align: inherit;
+}
+
+footer {
+    color: rgba(0,0,0,0.5);
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+footer span {
+    white-space: nowrap;
+    animation: footer 10s linear infinite;
+    position: relative;
+}
+footer:hover span {
+    animation-play-state: paused;
+}
+
+footer::before {
+    content: "";
+    background: linear-gradient(to right,var(--background) 0,rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 16px;
+    z-index: 2;
+}
+footer:after {
+    content: "";
+    background: linear-gradient(to left,var(--background) 0,rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    z-index: 2;
+}
+
+footer a {
+    color: var(--secondary);
+}
+
+@keyframes footer {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -250%;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

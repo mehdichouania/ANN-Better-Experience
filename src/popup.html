@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>ANN Better Experience</title>
         <link rel="stylesheet" href="./popup.css">
         <link rel="stylesheet"
@@ -7,15 +8,20 @@
     </head>
 
     <body>
-        <p class="text-center">
-            <span>ANN Better Experience</span>
-        </p>
+        <header>
+            <div class="logo">
+                <div class="brand">
+                    <span>ANN</span><span>Better</span><span>Experience</span>
+                </div>
+                <div class="baseline">A customization plugin for <b>AnimeNewsNetwork</b></div>
+            </div>
+        </header>
         <div id="app">
 
             <div>
                 <label class="switch">
                     <input class="switch-input" data-setting="showAside" type="checkbox" data-role="parent"/>
-                    <div class="switch-label">Show aside</div>
+                    <div class="switch-label">Display aside</div>
                     <div class="switch-item">
                         <span class="switch-item__toggle"></span>
                     </div>
@@ -23,37 +29,7 @@
                             
                 <label class="switch">
                     <input class="switch-input" data-setting="asideInjection" type="checkbox" data-role="child"/>
-                    <div class="switch-label">Inject banner feed above news feed</div>
-                    <div class="switch-item">
-                        <span class="switch-item__toggle"></span>
-                    </div>
-                </label>
-            </div>
-
-            <div>
-                <label class="switch">
-                    <input class="switch-input" data-setting="showNonGlobalArticles" type="checkbox"/>
-                    <div class="switch-label">Show localized articles</div>
-                    <div class="switch-item">
-                        <span class="switch-item__toggle"></span>
-                    </div>
-                </label>
-            </div>
-
-            <div>
-                <label class="switch">
-                    <input class="switch-input" data-setting="showBanner" type="checkbox"/>
-                    <div class="switch-label">Show banner</div>
-                    <div class="switch-item">
-                        <span class="switch-item__toggle"></span>
-                    </div>
-                </label>
-            </div>
-
-            <div>
-                <label class="switch">
-                    <input class="switch-input" data-setting="showSettings" type="checkbox"/>
-                    <div class="switch-label">Show settings bar</div>
+                    <div class="switch-label">Inject aside above news feed</div>
                     <div class="switch-item">
                         <span class="switch-item__toggle"></span>
                     </div>
@@ -71,14 +47,64 @@
             </div>
 
             <div>
-                <label class="switch">
-                    <div class="switch-label">
+                <div class="switch">
+                    <label for="articlesPerLine" class="switch-label">
                         <div>Number of articles per line</div>
+                    </label>
+                    <div class="btnwrapper">
+                        <div>-</div>
+                        <input data-setting="articlesPerLine" steps="1" min="3" max="8" type="number" value="0" name="" id="articlesPerLine"/>
+                        <div>+</div>
                     </div>
-                    <input data-setting="articlesPerLine" steps="1" min="3" max="8" type="number" name="" id="">
+                </div>
+            </div>
+
+            <div>
+                <label class="switch">
+                    <input class="switch-input" data-setting="showNonGlobalArticles" type="checkbox"/>
+                    <div class="switch-label">Display localized articles</div>
+                    <div class="switch-item">
+                        <span class="switch-item__toggle"></span>
+                    </div>
                 </label>
             </div>
-            <a href="#" id="reset">Reset all settings</a>
+
+            <div>
+                <label class="switch">
+                    <input class="switch-input" data-setting="showMenu" type="checkbox"/>
+                    <div class="switch-label">Display menu bar</div>
+                    <div class="switch-item">
+                        <span class="switch-item__toggle"></span>
+                    </div>
+                </label>
+            </div>
+
+            <div>
+                <label class="switch">
+                    <input class="switch-input" data-setting="showBanner" type="checkbox"/>
+                    <div class="switch-label">Display banner</div>
+                    <div class="switch-item">
+                        <span class="switch-item__toggle"></span>
+                    </div>
+                </label>
+            </div>
+
+            <div>
+                <label class="switch">
+                    <input class="switch-input" data-setting="showSettings" type="checkbox"/>
+                    <div class="switch-label">Display settings bar</div>
+                    <div class="switch-item">
+                        <span class="switch-item__toggle"></span>
+                    </div>
+                </label>
+            </div>
+            <a href="#" id="reset">
+                <svg arial-hidden="true" xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 89.985 83.316"><path d="M79.875 58.836l10.11-17.51h-6.67a41.656 41.656 0 10-12.2 29.791l-4.86-4.861a34.79 34.79 0 1110.18-24.93h-6.66z"/></svg>
+                Reset all settings 
+            </a>
+            <footer>
+                <span>This is not an official extension made by <a target="_blank" href="https://animenewsnetwork.com/">Anime News Network</a>. Contribute on <a target="_blank" href="https://github.com/myorave/ann-better-experience">GitHub</a>. Made with (ɔ◔‿◔)ɔ ♥ in France. Ver 1.0</span>
+            </footer>
         </div>
         <script type="module" src="./popup.js"></script>
     </body>

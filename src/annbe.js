@@ -24,6 +24,9 @@ const updateView = (settings) => {
     // showSettings
     document.querySelector('.controls').style.display = settings.showSettings ? 'block' : 'none';
 
+    // showMenu
+    document.querySelector('#menu').style.display = settings.showMenu ? 'block' : 'none';
+
     // asideInjection
     // let clone = aside.cloneNode();
     if(settings.asideInjection) {
