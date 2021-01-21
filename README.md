@@ -7,6 +7,13 @@ Anime News Network in its basic state is certainly not the most best looking web
 quite outdated with its current design. This extension will help you to customize and beautify
 ANN depending on your preferences.
 
+## Get it
+ANN BE is available for chromium based browsers such as Chrome, Brave, Edge...
+
+It's available on the Chrome Web Store:
+
+[![chromewebstore](annbe-chromewebstore.png)](https://chrome.google.com/webstore/detail/ann-better-experience/obgdeegkdfgnmephnfgoecanaffkbled)
+
 ## How to use
 Once the extension is installed, you can access to settings by click on the extension icon to have access
 to a large range of setting to make the most of your user experience.
