@@ -12,7 +12,7 @@ ANN BE is available for chromium based browsers such as Chrome, Brave, Edge...
 
 It's available on the Chrome Web Store:
 
-[![chromewebstore](annbe-chromewebstore.png)](https://chrome.google.com/webstore/detail/ann-better-experience/obgdeegkdfgnmephnfgoecanaffkbled)
+[![chromewebstore](https://img.shields.io/chrome-web-store/v/obgdeegkdfgnmephnfgoecanaffkbled?color=%2352b8c6&label=Chrome&logo=google-chrome&logoColor=white&style=for-the-badge)](https://chrome.google.com/webstore/detail/ann-better-experience/obgdeegkdfgnmephnfgoecanaffkbled)
 
 ## How to use
 Once the extension is installed, you can access to settings by click on the extension icon to have access
