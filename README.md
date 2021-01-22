@@ -1,16 +1,16 @@
-# ANN Better Experience
+# **ANN Better Experience**
 ![screenshot1](annbe-screenshot-1.png)
 ![screenshot2](annbe-screenshot-2.png)
 
 ## Why
-Anime News Network in its basic state is certainly not the most best looking website and is also to be fair,
+**Anime News Network** in its basic state is certainly not the most best looking website and is also to be fair,
 quite outdated with its current design. This extension will help you to customize and beautify
 ANN depending on your preferences.
 
 ## Get it
-ANN BE is available for chromium based browsers such as Chrome, Brave, Edge...
+**ANN Better Experience** is available for chromium based browsers such as Chrome, Brave, Edge...
 
-It's available on the Chrome Web Store:
+It's available on the ***Chrome Web Store***:
 
 [![chromewebstore](https://img.shields.io/chrome-web-store/v/obgdeegkdfgnmephnfgoecanaffkbled?color=%2352b8c6&label=Chrome&logo=google-chrome&logoColor=white&style=for-the-badge)](https://chrome.google.com/webstore/detail/ann-better-experience/obgdeegkdfgnmephnfgoecanaffkbled)
 
